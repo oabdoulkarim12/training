@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Drazo App</string>
+    <string name="drazo_s_commuty">Drazo\'s Commuty</string>
+    <string name="etude_discussion_profit">Etude-Discussion-Profit</string>
+    <string name="drazo_s_community" />
+    <string name="mathématiques">mathématiques</string>
+
+    <string name="_4eme"><u>4eme</u></string>
+
+    <string name="_3eme"><u>3eme</u></string>
+
+    <string name="_2nd"><u>2nd</u></string>
+
+    <string name="_1ere"><u>1ere</u></string>
+
+    <string name="tle"><u>Tle</u></string>
+
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">YOUR_KEY_HERE</string>
+
+</resources>

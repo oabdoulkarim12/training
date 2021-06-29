@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:transitionName="show_item_trans"
+    android:id="@+id/linear_layout_item_grid"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/Eclipse">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_layout"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/grid_item"
+            android:layout_width="210dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_height="244dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:layout_below="@+id/description_title"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toEndOf="@+id/grid_item"
+            android:layout_toRightOf="@+id/grid_item"
+            android:background="@color/white"
+            android:fontFamily="@font/work_sans"
+            android:hint="Description"
+            android:maxLines="9"
+            android:ellipsize="end"
+            android:paddingRight="2dp"
+            android:paddingLeft="4dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Price"
+            android:paddingBottom="13dp"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/grid_item"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/grid_item"
+            android:layout_below="@+id/item_name"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="-5dp"/>
+
+        <TextView
+            android:id="@+id/description_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Description:"
+            android:fontFamily="@font/baloo"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/Eclipse"
+            android:layout_toEndOf="@id/grid_item"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/grid_item"
+            android:layout_below="@+id/item_price"
+            android:layout_marginRight="2dp"/>
+
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Item Name"
+            android:fontFamily="@font/baloo"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:layout_toEndOf="@id/grid_item"
+            android:layout_toRightOf="@id/grid_item"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/item_localisation"
+            android:layout_width="347dp"
+            android:layout_height="36dp"
+            android:hint="Localisation here"
+            android:paddingTop="5dp"
+            android:background="@color/Eclipse"
+            android:fontFamily="@font/baloo"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/upload_profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:src="@drawable/google_pin"
+            app:civ_border_width="1.5dp"
+            app:civ_border_color="@color/white"
+            android:layout_toRightOf="@id/item_localisation"
+            android:layout_toEndOf="@id/item_localisation">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/item_localisation"
+        android:background="@color/Light_orange"
+        />
+
+
+</LinearLayout>

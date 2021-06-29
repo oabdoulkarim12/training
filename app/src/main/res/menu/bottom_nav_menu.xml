@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mHome"
+        android:title="Accueil"
+        android:icon="@drawable/ic_home"/>
+
+
+    <item
+        android:id="@+id/mSchool"
+        android:title="Ecole"
+        android:icon="@drawable/ic_school"/>
+
+
+    <item
+        android:id="@+id/place_holder"
+        android:title="Publier"
+        android:enabled="false"
+        android:visible="true"
+     />
+
+
+    <item
+        android:id="@+id/mStore"
+        android:title="Boutique"
+        android:icon="@drawable/ic_store"/>
+
+    <item
+        android:id="@+id/mGroup"
+        android:title="Groupe"
+        android:icon="@drawable/ic_community"/>
+
+</menu>

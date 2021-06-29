@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeworkMenu"
+    android:background="@color/Light_orange"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="1dp"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/background_border"
+        android:backgroundTint="@color/orange">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toolbar_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            app:cardCornerRadius="25dp"
+            android:background="@color/Light_orange"
+            android:layout_alignParentStart="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/Light_orange"
+                android:background="@color/Light_orange"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/paytone_one"
+            android:text="Boutique"
+            android:layout_centerVertical="true"
+            android:textSize="30sp"
+            android:textAllCaps="true"
+            android:layout_toStartOf="@+id/toolbar_search"
+            android:layout_toLeftOf="@+id/toolbar_search"
+            android:layout_marginRight="36dp"
+            android:textColor="@color/black"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toolbar_profile_pic_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            app:cardCornerRadius="50dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar_profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add_photo"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
+                android:background="@color/Light_orange"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toolbar_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@+id/toolbar_profile_pic_container"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="25dp"
+            android:background="@color/Light_orange"
+            android:layout_marginEnd="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/Light_orange"
+                android:background="@color/Light_orange"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Catégories"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="25sp">
+            </TextView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp"
+                android:layout_marginTop="-20dp">
+
+                <RelativeLayout
+                    android:id="@+id/sell_vehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/car_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/car_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Vehicules"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/car_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-35dp"
+                    android:layout_marginRight="-10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/sell_electronics"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/phone_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/electronics_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="Electroniques"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/phone_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-5dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp">
+
+                <RelativeLayout
+                    android:id="@+id/sell_clothing"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/clothimg_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/clothing_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Habillements"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/clothing_logo"
+                    android:layout_alignParentRight="true"
+                     />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp">
+
+                <RelativeLayout
+                    android:id="@+id/sell_rent_house"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/rental_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/housing_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Maison"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/house_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginRight="-3dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-2dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginEnd="-2dp">
+
+                <RelativeLayout
+                    android:id="@+id/sell_furniture"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/furniture_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="13dp">
+
+                    <TextView
+                        android:id="@+id/furniture_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                            android:text="Meuble"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sofa_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginRight="-10dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

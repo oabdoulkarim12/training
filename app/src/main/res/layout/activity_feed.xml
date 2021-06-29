@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Light_orange"
+    tools:context=".FeedActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/background_border"
+        android:backgroundTint="@color/orange">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+
+            <ImageView
+                android:id="@+id/tool_bar_logo"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:src="@drawable/d_logo"
+                android:layout_centerVertical="true"
+                android:paddingLeft="-20dp"
+                android:paddingStart="-20dp"
+                android:paddingBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-20dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_toEndOf="@+id/tool_bar_logo"
+                android:layout_toRightOf="@+id/tool_bar_logo"
+                android:text="Drazo"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="60dp"
+                android:textSize="40sp"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/Light_orange"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/toolbar_profile_pic_container"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                app:cardCornerRadius="50dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/toolbar_profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_add_photo"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp"
+                    android:background="@color/Light_orange"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/toolbar_search"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toLeftOf="@+id/toolbar_message"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="25dp"
+                android:background="@color/Light_orange">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_search"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/Light_orange"
+                    android:background="@color/Light_orange"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/toolbar_message"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toLeftOf="@+id/toolbar_profile_pic_container"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="25dp"
+                android:background="@color/Light_orange">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_messages"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/Light_orange"
+                    android:background="@color/Light_orange"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/toolbar_notification"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toLeftOf="@+id/toolbar_search"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="25dp"
+                android:background="@color/Light_orange">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_notifications"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/Light_orange"
+                    android:background="@color/Light_orange"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="58.3636dp"
+        android:layout_marginBottom="58dp"
+        android:orientation="vertical">
+
+<!--        <GridView-->
+<!--            android:id="@+id/items_gridview"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:numColumns="1"-->
+<!--            android:verticalSpacing="10dp"-->
+<!--            android:horizontalSpacing="6dp"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:focusable="true"
+        android:clickable="true"
+        android:src="@drawable/ic_add"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:borderWidth="0dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:src="@drawable/ic_school"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginLeft="143dp"
+        android:focusable="true"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:src="@drawable/ic_store"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="215dp"
+        android:layout_marginLeft="215dp"
+        android:backgroundTint="@color/white"
+        android:focusable="true"
+        app:borderWidth="0dp"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:src="@drawable/ic_community"
+        android:layout_marginBottom="170dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:backgroundTint="@color/white"
+        android:focusable="true"
+        app:borderWidth="0dp"
+        android:visibility="invisible"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

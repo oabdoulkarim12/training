@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeworkMenu"
+    android:background="@color/Light_orange"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="1dp"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/background_border"
+        android:backgroundTint="@color/orange">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toolbar_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            app:cardCornerRadius="25dp"
+            android:background="@color/Light_orange"
+            android:layout_alignParentStart="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/Light_orange"
+                android:background="@color/Light_orange"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/paytone_one"
+            android:text="Matières"
+            android:textSize="30sp"
+            android:textAllCaps="true"
+            android:layout_toStartOf="@+id/toolbar_search"
+            android:layout_toLeftOf="@+id/toolbar_search"
+            android:layout_marginRight="36dp"
+            android:textColor="@color/black"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toolbar_profile_pic_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            app:cardCornerRadius="50dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar_profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add_photo"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp"
+                android:background="@color/Light_orange"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/toolbar_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@+id/toolbar_profile_pic_container"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="25dp"
+            android:background="@color/Light_orange"
+            android:layout_marginEnd="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/Light_orange"
+                android:background="@color/Light_orange"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Choisissez la classe et la matière de votre exercise"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+            </TextView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp"
+                android:layout_marginTop="-20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/math_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Mathématiques"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/math_4e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="16sp"
+                        android:text="@string/_4eme" />
+
+                    <TextView
+                        android:id="@+id/math_3e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3eme"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/math_4e"
+                        android:layout_toRightOf="@+id/math_4e" />
+
+                    <TextView
+                        android:id="@+id/math_2nd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_2nd"
+                        android:textSize="16sp"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/math_3e"
+                        android:layout_toRightOf="@+id/math_3e"/>
+
+
+                    <TextView
+                        android:id="@+id/math_1ere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1ere"
+                        android:textSize="16sp"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/math_2nd"
+                        android:layout_toRightOf="@+id/math_2nd"/>
+
+                    <TextView
+                        android:id="@+id/math_Tle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tle"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/math_1ere"
+                        android:layout_toRightOf="@+id/math_1ere"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/math_symbole"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginRight="-23dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/physic_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Physique"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+
+                    <TextView
+                        android:id="@+id/physique_4e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="16sp"
+                        android:text="@string/_4eme" />
+
+                    <TextView
+                        android:id="@+id/physique_3e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3eme"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/physique_4e"
+                        android:layout_toRightOf="@+id/physique_4e" />
+
+                    <TextView
+                        android:id="@+id/physique_2nd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_2nd"
+                        android:textSize="16sp"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/physique_3e"
+                        android:layout_toRightOf="@+id/physique_3e"/>
+
+
+                    <TextView
+                        android:id="@+id/physique_1ere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1ere"
+                        android:textSize="16sp"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/physique_2nd"
+                        android:layout_toRightOf="@+id/physique_2nd"/>
+
+                    <TextView
+                        android:id="@+id/physique_Tle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tle"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/physique_1ere"
+                        android:layout_toRightOf="@+id/physique_1ere"/>
+
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/physics_sumbole"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginRight="-15dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/compta_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Chimie"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/chimie_4e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="100dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="16sp"
+                        android:text="@string/_4eme" />
+
+                    <TextView
+                        android:id="@+id/chimie_3e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3eme"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/chimie_4e"
+                        android:layout_toRightOf="@+id/chimie_4e" />
+
+                    <TextView
+                        android:id="@+id/chimie_2nd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_2nd"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/chimie_3e"
+                        android:layout_toRightOf="@+id/chimie_3e"/>
+
+
+                    <TextView
+                        android:id="@+id/chimie_1ere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1ere"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/chimie_2nd"
+                        android:layout_toRightOf="@+id/chimie_2nd"/>
+
+                    <TextView
+                        android:id="@+id/chimie_Tle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tle"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/chimie_1ere"
+                        android:layout_toRightOf="@+id/chimie_1ere"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/cimie_bk"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-15dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:paddingLeft="-3dp"
+                android:paddingStart="-3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/comptabiliteee_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Comptabilité"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+
+                    <TextView
+                        android:id="@+id/compta_4e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="100dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="16sp"
+                        android:text="@string/_4eme" />
+
+                    <TextView
+                        android:id="@+id/compta_3e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3eme"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/compta_4e"
+                        android:layout_toRightOf="@+id/compta_4e" />
+
+                    <TextView
+                        android:id="@+id/compta_2nd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_2nd"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/compta_3e"
+                        android:layout_toRightOf="@+id/compta_3e"/>
+
+
+                    <TextView
+                        android:id="@+id/compta_1ere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1ere"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/compta_2nd"
+                        android:layout_toRightOf="@+id/compta_2nd"/>
+
+                    <TextView
+                        android:id="@+id/compta_Tle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tle"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/compta_1ere"
+                        android:layout_toRightOf="@+id/compta_1ere"/>
+
+
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/comptabilite_bk"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:padding="4dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-2dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginEnd="-2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/green_bk"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:padding="25dp"
+                        android:text="Anglais"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+
+                    <TextView
+                        android:id="@+id/anglais_4e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="100dp"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="16sp"
+                        android:text="@string/_4eme" />
+
+                    <TextView
+                        android:id="@+id/anglais_3e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_3eme"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/anglais_4e"
+                        android:layout_toRightOf="@+id/anglais_4e" />
+
+                    <TextView
+                        android:id="@+id/anglais_2nd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_2nd"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/anglais_3e"
+                        android:layout_toRightOf="@+id/anglais_3e"/>
+
+
+                    <TextView
+                        android:id="@+id/anglais_1ere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1ere"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/paytone_one"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/anglais_2nd"
+                        android:layout_toRightOf="@+id/anglais_2nd"/>
+
+                    <TextView
+                        android:id="@+id/anglais_Tle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tle"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/paytone_one"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_toEndOf="@+id/anglais_1ere"
+                        android:layout_toRightOf="@+id/anglais_1ere"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/english_logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-40dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

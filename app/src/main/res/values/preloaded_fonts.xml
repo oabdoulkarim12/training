@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abril_fatface</item>
+        <item>@font/antic</item>
+        <item>@font/baloo</item>
+        <item>@font/bangers</item>
+        <item>@font/bungee</item>
+        <item>@font/paytone_one</item>
+        <item>@font/work_sans</item>
+        <item>@font/work_sans_semibold</item>
+    </array>
+</resources>
